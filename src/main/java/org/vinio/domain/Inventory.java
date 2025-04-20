@@ -4,6 +4,8 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 public class Inventory {
+    private static int static_id = 0;
+    private int id;
     private final Map<String, Product> products = new HashMap<>();
 
     public void addProduct(Product product) {
@@ -15,6 +17,10 @@ public class Inventory {
         if (product != null) {
             product.increaseQuantity(quantity);
         }
+    }
+
+    public Inventory() {
+        this.id = static_id++;
     }
 
     public void useProduct(String productId, int quantity) {
@@ -41,7 +47,8 @@ public class Inventory {
     @Override
     public String toString() {
         return "Inventory{" +
-                "products=" + products +
+                "id=" + id +
+                ", products=" + products +
                 '}';
     }
 }
