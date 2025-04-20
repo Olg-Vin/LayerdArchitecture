@@ -1,11 +1,10 @@
 package org.vinio.application;
 
 import org.vinio.domain.Inventory;
+import org.vinio.domain.InventoryRepository;
 import org.vinio.domain.Product;
-import org.vinio.infrastructure.InventoryRepository;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 
 public class InventoryService {
